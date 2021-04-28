@@ -14,6 +14,7 @@ a {
   --maim-font: "Roboto", sans-serif;
   --bg-cl-icon: #f5f4fa;
   --icon-cl: #afb1b8;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 html {
   box-sizing: border-box;
@@ -133,6 +134,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
+  transition: var(--animation);
 }
 .site-nav-link-studia {
   font-weight: 500;
@@ -142,6 +144,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
+  transition: background-color var(--animation), color var(--animation);
 }
 .auth {
   display: flex;
@@ -159,6 +162,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
+  transition:background-color var(--animation), color var(--animation);
 }
 .contakts-tel {
   font-weight: 500;
@@ -170,6 +174,8 @@ p {
   display: block;
   display: flex;
   text-align: center;
+    transition:background-color var(--animation), color var(--animation);
+
 }
 /*#endregion main*/
 
@@ -214,6 +220,7 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--text-white);
+  cursor: pointer;
   width: 145px;
   height: 38px;
   left: 712px;
@@ -223,6 +230,8 @@ p {
   left: 700px;
   top: 430px;
   border-style: none;
+  transition:background-color var(--animation), color var(--animation);
+
 }
 /*#endregion herro*/
 /*#region features*/
@@ -362,6 +371,8 @@ p {
   color: var(--icon-cl);
   background-color: inherit;
   fill: currentColor;
+  transition: background-color var(--animation), color var(--animation);
+
 }
 
 /*#endregion our-team*/
@@ -392,6 +403,8 @@ p {
   fill: var(--icon-cl);
   border-radius: 4px;
   border: 1px solid var(--icon-cl);
+    transition:background-color var(--animation), color var(--animation);
+
 }
 .client-link:hover,
 .client-link:focus {
@@ -444,6 +457,8 @@ p {
   text-decoration: none;
   margin-bottom: 9px;
   margin-top: 20px;
+  transition: background-color var(--animation), color var(--animation);
+
 }
 .footer-contakts-list {
   font-family: Roboto;
@@ -507,6 +522,8 @@ p {
   text-decoration: none;
   fill: var(--text-white);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--animation), color var(--animation);
+
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -569,6 +586,9 @@ p {
   border-radius: 4px;
   border-style: none;
   padding: 6px 22px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
+  transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
+
 }
 .card-set {
   flex-basis: calc(100% / 3 -20px);
@@ -583,6 +603,7 @@ p {
 }
 .card-list-content {
   width: 370px;
+  transition: box-shadow var(--animation);
 }
 .card-list-content:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -597,38 +618,38 @@ p {
   flex-wrap: wrap;
 }
 .card-list-iten {
-
   margin-right: 30px;
   background-color: var(--text-white);
   margin-bottom: 30px;
 }
-.card-img{
+.card-img {
   position: relative;
+  overflow: hidden;
 }
-.card-list-overlay{
+.card-list-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  transform: translateY(100%) ;
+  transform: translateY(100%);
 
   background: rgba(33, 150, 243, 0.9);
+  transition: transform var(--animation);
 }
-.card-list-overlay .card-list-overlay,
-.card-list-overlay:focus .card-list-overlay {
+.card-list-contet:hover .card-list-overlay,
+.card-list-content:focus .card-list-overlay {
   transform: translateY(0);
-
-  }
-.card-list-descr{
+}
+.card-list-descr {
   font-size: 18px;
-line-height: 1.56;
-/* or 156% */
+  line-height: 1.56;
+  /* or 156% */
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 
-color: var(--text-white);
+  color: var(--text-white);
 }
 .project-content {
   padding: 15px;
@@ -659,31 +680,33 @@ color: var(--text-white);
   letter-spacing: 0.03em;
   color: var(--pargf-cl);
 }
-/*
+
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
+  visibility:visible;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .backdrop .is-hidden {
   opacity: 0;
-  pointer-events: none;
   visibility: inherit;
+  pointer-events: none;
 }
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
 
-  color: var(--text-white);
+  background-color: var(--text-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -694,7 +717,9 @@ color: var(--text-white);
   height: 30px;
   margin-top: 8px;
   margin-left: 8px;
-  fill: var(--main-text-cl);
-  background: var(--text-white);
+  align-items: center;
+  background-color: var(--text-white) ;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
 }

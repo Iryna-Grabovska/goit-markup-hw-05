@@ -43,7 +43,7 @@
         <section class="herro">
             <div class="container">
                 <h1 class="herro-title">ЭФЕКТИВНЫЕ РЕШЕНИЕ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                <button class="herro-button" data-modal-open>Заказать услугу</button>
+                <button class="herro-button" type="button" data-modal-open>Заказать услугу</button>
             </div>
             
         </section>
@@ -382,12 +382,14 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hiden" data-modal>
-        <div class="madal">
-            <button class="btn-close" data-modal-close></button>
-            <svg  width="18" height="18">
-                <use href="./imeges/icons.svg#icon-close"></use>
-            </svg>
+    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close>
+                <svg width="18" height="18">
+                    <use href="./imeges/icons.svg#icon-close"></use>
+                </svg>
+            </button>
         </div>
     </div>
     <script src="./js/modal.js"></script>
