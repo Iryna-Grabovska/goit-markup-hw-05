@@ -74,15 +74,16 @@ p {
   position: relative;
   color: var(--accent-color);
 }
-.line::after{
-  content:"";
+.line::after {
+  content: "";
+  margin-top: 29px;
   padding: -1px;
   position: absolute;
   display: block;
-width: 100%;
-height: 4px;
-border-radius: 2px;
-background-color: var(--btn-cl);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--btn-cl);
 }
 /* #region main*/
 .main-nav {
@@ -176,7 +177,7 @@ background-color: var(--btn-cl);
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
-  transition:background-color var(--animation), color var(--animation);
+  transition: background-color var(--animation), color var(--animation);
 }
 .contakts-tel {
   font-weight: 500;
@@ -188,8 +189,7 @@ background-color: var(--btn-cl);
   display: block;
   display: flex;
   text-align: center;
-    transition:background-color var(--animation), color var(--animation);
-
+  transition: background-color var(--animation), color var(--animation);
 }
 /*#endregion main*/
 
@@ -244,8 +244,7 @@ background-color: var(--btn-cl);
   left: 700px;
   top: 430px;
   border-style: none;
-  transition:background-color var(--animation), color var(--animation);
-
+  transition: background-color var(--animation), color var(--animation);
 }
 /*#endregion herro*/
 /*#region features*/
@@ -386,7 +385,6 @@ background-color: var(--btn-cl);
   background-color: inherit;
   fill: currentColor;
   transition: background-color var(--animation), color var(--animation);
-
 }
 
 /*#endregion our-team*/
@@ -417,8 +415,7 @@ background-color: var(--btn-cl);
   fill: var(--icon-cl);
   border-radius: 4px;
   border: 1px solid var(--icon-cl);
-    transition:background-color var(--animation), color var(--animation);
-
+  transition: background-color var(--animation), color var(--animation);
 }
 .client-link:hover,
 .client-link:focus {
@@ -472,7 +469,6 @@ background-color: var(--btn-cl);
   margin-bottom: 9px;
   margin-top: 20px;
   transition: background-color var(--animation), color var(--animation);
-
 }
 .footer-contakts-list {
   font-family: Roboto;
@@ -537,7 +533,6 @@ background-color: var(--btn-cl);
   fill: var(--text-white);
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--animation), color var(--animation);
-
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -584,8 +579,6 @@ background-color: var(--btn-cl);
   display: flex;
   justify-content: center;
 }
-.button-item {
-}
 .button-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -600,8 +593,8 @@ background-color: var(--btn-cl);
   border-radius: 4px;
   border-style: none;
   padding: 6px 22px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
-  transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px;
 }
 
 .card-set {
@@ -654,14 +647,13 @@ background-color: var(--btn-cl);
   transition: transform var(--animation);
 }
 .card-img:focus .card-list-overlay,
-.card-img:hover .card-list-overlay{
+.card-img:hover .card-list-overlay {
   transform: translateY(0);
-  }
+}
 
 .card-list-descr {
   font-size: 18px;
   line-height: 1.56;
- 
 
   letter-spacing: 0.03em;
 
@@ -706,6 +698,7 @@ background-color: var(--btn-cl);
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   opacity: 1;
+  transition: visibility var(--animation), opacity var(--animation);
 }
 
 .backdrop.is-hidden {
@@ -726,14 +719,14 @@ background-color: var(--btn-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
- transform: translate(-50%, -50%) scaleX(1);
- transition: var(--animation);
+  transform: translate(-50%, -50%) scaleX(1);
+  transition: var(--animation);
 }
 .btn-close {
   position: absolute;
   width: 30px;
   height: 30px;
-   margin-top: 8px;
+  margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
   align-items: center;
