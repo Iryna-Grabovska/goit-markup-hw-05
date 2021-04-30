@@ -722,11 +722,11 @@ p {
 }
 .btn-close {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 32px;
+  height: 32px;
   margin-top: 8px;
   margin-right: 8px;
-  margin-left: auto;
+
   align-items: center;
   justify-content: center;
   background-color: var(--text-white);
